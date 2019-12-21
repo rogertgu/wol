@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WOL</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</header>
+<body>
+    <!-- HEADER -->
+    <header class="header hero is-primary has-text-centered">
+        <div class="hero-body">
+        <h1 class="title">Wake On Lan</h1>
+        <h2 class="subtitle">Enciende el servidor!</h2>
+    {% block header %}{% endblock %}
+</div>
+    </header>
+    <!-- MAIN -->
+    <main class="container is-fluid">
+    
+    {% block main %}{% endblock %}
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+            <div class="content has-text-centered">
+        <p>copyleft - Rogert Guevara 2019</p>
+    {% block footer %}{% endblock %}
+        </div>
+    </footer>
+</body>
+</html>
+
