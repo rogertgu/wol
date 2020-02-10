@@ -6,8 +6,18 @@
     <br><br>
     <br><br>
 <form action="/wol" method="post">
-    <div class="control has-text-centered">
-      <button name="form-submit"class="button is-medium is-danger"type="submit">Encender-PC</button>
+  <div class="columns is-mobile has-text-centered">
+    <div class="column is-half is-offset-one-quarter">
+      <input class="input" type="text"  name="dir_ip" id="dir_ip"  placeholder="x.x.x.x" pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" required>
+      <input class="input" type="text"  name="dir_mac" id="dir_mac"  placeholder="1A-2B-3C-4D-5E-6F" pattern="^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$" required>
+      <button class="button is-medium is-danger" name="form-submit"type="submit">Encender-PC</button>
+
+
+
+
+
+
+
       <br><br><br><br><br><br><br><br>
       </div>
     </form>

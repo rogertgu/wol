@@ -14,14 +14,13 @@ def index():
 
 @app.route('/wol', methods=['GET', 'POST'])
 def wol():
+
     if request.method == 'POST':
+        dir_ip = request.form.get('dir_ip')
+        dir_mac = request.form.get('dir_mac')
+        
         send_magic_packet('1C.1B.0D.A2.7C.53',ip_address='minecraft.rjgu.es',port=9)
 
-    # if "open" in request.form:
-    #     pass
-    # elif "close" in request.form:
-    #     pass
-    # return render_template('contact.html')
 
 
     return render_template('index.html')
