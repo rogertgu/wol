@@ -4,6 +4,7 @@ from flask import request
 from flask import redirect, url_for
 from wakeonlan import send_magic_packet
 from flask import session
+import os
 
 
 app = Flask(__name__)
@@ -37,4 +38,5 @@ def wol():
 
 
 if __name__ == "__main__":
-    app.run('0.0.0.0',5000,debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0',port=port)
